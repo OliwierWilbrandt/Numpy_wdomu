@@ -44,15 +44,86 @@
 # print(wynik)
 
 #Zad5
+#
+# import numpy as np
+# def generuj_macierz_diagonalna(dlugosc):
+#     wektor_odwrocony = np.arange(dlugosc, 0, -1)
+#
+#     macierz_diagonalna = np.diag(wektor_odwrocony)
+#
+#     return macierz_diagonalna
+#
+# dlugosc_wektora = 5
+# wynikowa_macierz = generuj_macierz_diagonalna(dlugosc_wektora)
+# print("Wygenerowana macierz diagonalna:\n", wynikowa_macierz)
 
-import numpy as np
-def generuj_macierz_diagonalna(dlugosc):
-    wektor_odwrocony = np.arange(dlugosc, 0, -1)
+#Zad6
+#
+# import numpy as np
+# def generate_crossword(word1, word2, word3):
+#
+#     max_len = max(len(word1), len(word2), len(word3))
+#
+#     crossword = np.full((max_len, max_len), ' ', dtype=str)
+#
+#     crossword[:len(word1), 0] = list(word1)
+#     crossword[max_len - len(word2):, max_len - 1] = list(word2[::-1])
+#     np.fill_diagonal(crossword, list(word3))
+#
+#     return crossword
+#
+# word1 = 'PYTHON'
+# word2 = 'NUMPY'
+# word3 = 'WIZUALIZACJA'
+#
+# crossword = generate_crossword(word1, word2, word3)
+#
+# print(crossword)
 
-    macierz_diagonalna = np.diag(wektor_odwrocony)
+#Zad7
+#
+# import numpy as np
+# def generate_diagonal_matrix(n):
+#
+#     matrix = np.zeros((n, n), dtype=int)
+#
+#     for i in range(n):
+#         for j in range(n):
+#             if i == j:
+#                 matrix[i, j] = 2 * (i + 1)
+#             elif i < j:
+#                 matrix[i, j] = 2 * (j - i + 1)
+#             else:
+#                 matrix[i, j] = 2 * (i - j + 1)
+#
+#     return matrix
+#
+# n = 3
+# result_matrix = generate_diagonal_matrix(n)
+# print(result_matrix)
 
-    return macierz_diagonalna
+#Zad8
 
-dlugosc_wektora = 5
-wynikowa_macierz = generuj_macierz_diagonalna(dlugosc_wektora)
-print("Wygenerowana macierz diagonalna:\n", wynikowa_macierz)
+
+
+#Zad9
+# import numpy as np
+# def fibonacci(n):
+#
+#     fib_matrix = np.zeros((n, n), dtype=int)
+#
+#     fib_matrix[0, 0] = 0
+#     fib_matrix[0, 1] = 1
+#
+#     for i in range(n):
+#         for j in range(n):
+#             if i == 0 and j <= 1:
+#                 continue
+#             fib_matrix[i, j] = fib_matrix[i, j - 1] + fib_matrix[i, j - 2]
+#
+#     return fib_matrix
+#
+# fibonacci_matrix = fibonacci(5)
+# print(fibonacci_matrix)
+
+
