@@ -1,4 +1,5 @@
 #Zad 1
+#Wczytaj do DataFrame arkusz z narodzinami dzieci w Polsce dostępny w pliku /datasets/imiona.xlsx
 
 import pandas as pd
 
@@ -6,6 +7,14 @@ import pandas as pd
 # df = pd.read_excel(plik, header=0)
 
 #Zad2
+#Z danych z zadania 1 wyświetl (korzystając w miarę możliwości z funkcji biblioteki Pandas):
+# tylko te rekordy gdzie liczba nadanych imion była większa niż 1000 w danym roku
+# tylko rekordy gdzie nadane imię jest takie jak Twoje
+# sumę wszystkich urodzonych dzieci w całym danym okresie,
+# sumę dzieci urodzonych w latach 2000-2005
+# sumę urodzonych chłopców i dziewczynek,
+# najbardziej popularne imię dziewczynki i chłopca w danym roku ( czyli po 2 rekordy na rok),
+# najbardziej popularne imię dziewczynki i chłopca w całym danym okresie,
 
 # print(df[df.Liczba > 1000])
 # print('')
@@ -48,6 +57,14 @@ import pandas as pd
 #                                                                                    ascending=False).iloc[0])
 
 #Zad 3
+#Wczytaj plik /datasets/zamowieniana.csv a następnie wyświetl:
+# listę unikalnych nazwisk sprzedawców (przetwarzając zwróconą pojedynczą kolumnę z DataFrame)
+# 5 najwyższych wartości zamówień
+# ilość zamówień złożonych przez każdego sprzedawcę
+# sumę zamówień dla każdego kraju
+# sumę zamówień dla roku 2005, dla sprzedawców z Polski
+# średnią kwotę zamówienia w 2004 roku,
+# zapisz dane za 2004 rok do pliku zamówienia_2004.csv a dane za 2005 do pliku zamówienia_2005.csv
 
 # df = pd.read_csv('zamowienia.csv', header=0, sep=';', decimal='.')
 #

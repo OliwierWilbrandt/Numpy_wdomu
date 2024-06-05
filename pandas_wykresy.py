@@ -6,6 +6,7 @@ df = pd.read_excel(xlsx, header=0)
 print(df)
 
 #Zad 1
+#Stwórz wykres liniowy, który wyświetli liczbę urodzonych dzieci dla każdego roku.
 
 # roczniki = df['Rok'].unique()
 # grupa = df.groupby(['Rok']).agg({'Liczba':['sum']})
@@ -19,6 +20,7 @@ print(df)
 # plt.show()
 
 #Zad 2
+#Stwórz wykres słupkowy, który wyświetli liczbę urodzonych chłopców i dziewczynek z całego zbioru
 #
 # grupa = df.groupby(['Plec']).agg({'Liczba':['sum']})
 # wykres = grupa.plot.bar(ylabel='Liczba urodzeń')
@@ -28,6 +30,7 @@ print(df)
 # plt.show()
 
 #Zad 3
+#Wykres kołowy z wartościami % ukazującymi ilość urodzonych chłopców i dziewczynek w ostatnich 5 latach z datasetu.
 
 # grupa = df[df['Rok'] > 2012].groupby(['Plec']).agg({'Liczba':['sum']})
 # wykres = grupa.plot.pie(subplots=True, autopct='%.2f %%', fontsize=20)
@@ -35,6 +38,7 @@ print(df)
 # plt.show()
 
 # Zad4
+#Wyświetl na pomocą wykresu słupkowego ilość złożonych zamówień przez poszczególnych sprzedawców (zbiór danych zamówienia.csv).
 
 # df = pd.read_csv('zamowienia.csv', delimiter=';')
 # policzone = df.groupby('Sprzedawca').size()
