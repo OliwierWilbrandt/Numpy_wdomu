@@ -29,18 +29,15 @@ import matplotlib.pyplot as plt
 #	Na nowej ramce danych dokonaj grupowania danych po kolumnie „Car model” a następnie policz sumę wartości dla tych samochodów (kolumna Price)
 #	Na podstawie utworzonej grupy utwórz wykres słupkowy, dodaj tytuł oraz etykiety dla osi x i y. Dopasuj rozmiar wykresu tak aby był on widoczny w całości.
 
-#przykładowa ramka danych
-# data = {
-#     'Make': ['audi', 'audi', 'dodge', 'dodge', 'audi', 'dodge'],
-#     'Car model': ['A4', 'Q7', 'Charger', 'Durango', 'A3', 'Challenger'],
-#     'Price': [35000, 45000, 30000, 40000, 32000, 38000]
-# }
+
+# df = pd.read_csv('automobile.csv', header=0, sep=';', decimal='.')
 #
-# df = pd.DataFrame(data)
-#
-# filtered_df = df[df['Make'].isin(['audi', 'dodge'])]
+# filtered_df = df[df['Car model'].isin(['audi', 'dodge'])]
 #
 # grouped_df = filtered_df.groupby('Car model')['Price'].sum().reset_index()
+#
+# print("Nowa ramka danych audi i dodge:\n", filtered_df)
+# print(grouped_df)
 #
 # plt.figure(figsize=(12, 8))
 # plt.bar(grouped_df['Car model'], grouped_df['Price'], color=['blue', 'green'])
@@ -52,14 +49,13 @@ import matplotlib.pyplot as plt
 # plt.xticks(rotation=45)
 # plt.tight_layout()
 # plt.show()
-#
-# filtered_df, grouped_df
+
 
 #Zad3
 # Za pomocą biblioteki pomocą pandas wczytaj zawartość pliku „automobile.csv” do ramki danych i  utwórz wykres kołowy przedstawiający procentową ilość samochodów
 # z danym rodzajem paliwa (kolumna Fuel-type). Procentowe wartości mają być zaokrąglone do dwóch miejsc po przecinku, rozmiar czcionki 14. Dodaj tytuł i legendę.
 
-# df = pd.read_csv('automobile.csv')
+# df = pd.read_csv('automobile.csv', header=0, sep=';', decimal='.')
 #
 # fuel_counts = df['Fuel-type'].value_counts()
 #
